@@ -22,8 +22,8 @@
         required
         placeholder="Todo Content"
         #content="ngModel"
-        [ngModel]="todo.content"></textarea>
-      <mat-error *ngIf="content.invalid">Please enter a todo title.</mat-error>
+        [ngModel]="todo?.content"></textarea>
+      <mat-error *ngIf="content.invalid">Please enter content</mat-error>
     </mat-form-field>
     <button
       mat-raised-button

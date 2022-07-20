@@ -17,13 +17,13 @@ router.post("", (req, res, next) => {
 
   });
 
-  todo.save().then(createdMovie => {
+  todo.save().then(createdTodo => {
 
     res.status(201).json({
 
       message: "Todo added successfully",
 
-      movieId: createdMovie._id
+      todoId: createdTodo._id
 
     });
 

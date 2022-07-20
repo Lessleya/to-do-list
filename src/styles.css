@@ -1,3 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Raleway&display=swap');
+body { margin: 0;
+background-color: bisque;
+font-family:  'Raleway', sans-serif;;
 
-body { margin: 0; }
+ }
+
+.mat-button {
+    color: white;
+    font-family:  'Raleway', sans-serif;
+    background-color: rgb(200, 141, 159);
+    padding: 5px 30px 5px;
+    text-align: center;  
+
+}
+

@@ -1,0 +1,18 @@
+
+.mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(167, 99, 122);
+    padding: 30px;
+    height: 40px;
+    
+}
+span a{
+    text-align: center;
+    font-size: 50px;
+    text-decoration: none;
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+    padding: 30px;
+}
+

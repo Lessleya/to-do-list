@@ -4,6 +4,7 @@ import { Subject } from "rxjs";
 import { map } from 'rxjs/operators';
 import {Router} from "@angular/router"
 import { Todo } from "./todo.model";
+import { log } from "console";
 
 @Injectable({ providedIn: "root" })
 export class TodosService {
@@ -60,18 +61,19 @@ export class TodosService {
   }
 
   updateTodo(id: string, title: string, content: string){
+    
     const todo: Todo = {id: id, title: title, content: content};
     this.http
       .put("http://localhost:3000/api/todos/" + id, todo)
       .subscribe(response => {
 
-        const updatedMovies = [...this.todos];
+        const updatedTodos = [...this.todos];
 
-        const oldMovieIndex = updatedMovies.findIndex(p => p.id === todo.id);
+        const oldTodoIndex = updatedTodos.findIndex(p => p.id === todo.id);
 
-        updatedMovies[oldMovieIndex] = todo;
+        updatedTodos[oldTodoIndex] = todo;
 
-        this.todos = updatedMovies;
+        this.todos = updatedTodos;
 
         this.todosUpdated.next([...this.todos]);
 
