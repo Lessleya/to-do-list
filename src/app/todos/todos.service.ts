@@ -4,7 +4,6 @@ import { Subject } from "rxjs";
 import { map } from 'rxjs/operators';
 import {Router} from "@angular/router"
 import { Todo } from "./todo.model";
-import { log } from "console";
 
 @Injectable({ providedIn: "root" })
 export class TodosService {
@@ -61,6 +60,7 @@ export class TodosService {
   }
 
   updateTodo(id: string, title: string, content: string){
+    console.log('hello');
     
     const todo: Todo = {id: id, title: title, content: content};
     this.http

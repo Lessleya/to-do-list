@@ -31,6 +31,8 @@ export class TodoCreateComponent {
 
     this.route.paramMap.subscribe((paramMap: ParamMap) => {
 
+      console.log(JSON.stringify(paramMap))
+
       if (paramMap.has("todoId")) {
 
         this.mode = "edit";
@@ -67,6 +69,7 @@ export class TodoCreateComponent {
     }
 
     this.isLoading = true;
+    console.log(this.mode);
 
     if (this.mode === "create") {
 
